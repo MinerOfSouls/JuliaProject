@@ -64,7 +64,8 @@ function gradient_fit(W0, X, T, X_val, T_val; l2=0.005, lr=1.0, steps = 100, log
         end
     end
 
-    plot(1:steps, [t_accuracies, v_accuracies], title="Accuracy evolution")
+    p = plot!(1:steps, [t_accuracies, v_accuracies], title="Accuracy evolution")
+    display(p)
     return W
 end
 
